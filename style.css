@@ -7,6 +7,7 @@ h1 {
     font-size: 200%;
     padding: 0.5em;
     font-weight: bolder;
+    float:left;
 }
 
 h1 a {
@@ -37,11 +38,16 @@ p {
     margin-bottom: 1em;
     color: #000000;
 
-
 }
 body {
     background-color: #ffffff;
     height: 100%;
+}
+
+input {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 ul {
@@ -122,6 +128,18 @@ img.calendar {
 
 }
 
+.header {
+    display: block;
+    overflow: hidden;
+}
+
+.login {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    float: right;
+    padding: 1.5em;
+    text-align: center;
+}
+
 .sidebar {
     float:left; display:inline; width: 10%;
     min-width: 8em;
@@ -155,6 +173,11 @@ img.calendar {
     padding-left: 0.5em;
     padding-right: 0.5em;
     padding-bottom: 0.5em;
+    margin-top: 0.5em
+}
+
+.comment form {
+    float: right;
 }
 
 .calendar {
@@ -175,3 +198,4 @@ img.calendar {
     height: 5em;
 
 }
+

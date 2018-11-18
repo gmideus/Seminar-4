@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel = "stylesheet"
-      type = "text/css"
-      href = "reset.css"/>
-
-    <link rel = "stylesheet"
-          type = "text/css"
-          href = "style.css"/>
-    <meta charset="UTF-8">
-    <title>Tasty Recipes</title>
-</head>
-<body>
-<h1>
-    <a href="index.html">Tasty Recipes</a>
-</h1>
-<div class="sidebar">
-    <ul class="menu">
-        <li><a  href="index.html">Home</a></li>
-        <li><a class="active" href="calendar.html">Calendar</a></li>
-    </ul>
-
-    <ul class="recipes">
-        <li><b><strong>Recipes:</strong></b></li>
-        <li><a href="meatballs.html">Meatballs</a></li>
-        <li><a href="pancakes.html">Pancakes</a></li>
-    </ul>
-    <div class="sideimage">
-        <img src="JESUS.gif" alt="Communicating through Jesus"/>
-    </div>
-</div>
-
 <div class="content">
 
     <h2>
@@ -134,5 +101,3 @@
     </div>
 
 </div>
-</body>
-</html>
