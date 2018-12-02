@@ -1,12 +1,13 @@
 <?php
 
-require_once 'User.php';
-require_once 'keys.php';
+require_once './Resources/fragments/init.php';
 
-$filename = __DIR__ . '/users';
+include 'SQLConnect.php';
+$username = 'Admin';
+$password = password_hash('password', PASSWORD_DEFAULT);
 
-session_start();
 
-    $user = new User("User", "abc123");
-    file_put_contents($filename, serialize($user) . CHAT_ENTRY_DELIMITER, FILE_APPEND);
+$query = "INSERT INTO users (username, password) VALUES ('".$username."', '".$password."')";
+$mysqli->query($query);
+
 

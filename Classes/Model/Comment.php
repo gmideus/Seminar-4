@@ -1,18 +1,17 @@
 <?php
+namespace Model;
 
 class Comment{
     private $author;
     private $content;
-    private $date;
+    private $posttime;
     private $deleted;
     private $ID;
 
     public function __construct($author, $content){
         $this->author = $author;
         $this->content = $content;
-        $this->date = date('Y-m-d');
         $this->deleted = false;
-        $this->ID = uniqid();
     }
 
     public function getAuthor(){
@@ -27,12 +26,20 @@ class Comment{
         return $this->deleted;
     }
 
-    public function getDate(){
-        return $this->date;
+    public function getPosttime(){
+        return $this->posttime;
+    }
+
+    public function setPosttime($posttime){
+        $this->posttime = $posttime;
     }
 
     public function getID(){
         return $this->ID;
+    }
+
+    public function setID($ID){
+        $this->ID = $ID;
     }
 
     public function delete(){

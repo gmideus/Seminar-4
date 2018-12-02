@@ -33,7 +33,7 @@
             </div>
             <div class="calendarday">
                 9
-                <a href="pancakes.html"><img class="calendar" src="pancakes.jpg" alt="Pancakes"/></a>
+                <a href="index.php?page=pancakes"><img class="calendar" src="Resources/images/pancakes.jpg" alt="Pancakes"/></a>
             </div>
             <div class="calendarday">
                 10
@@ -69,7 +69,7 @@
             </div>
             <div class="calendarday">
                 20
-                <a href="meatballs.html"><img class="calendar" src="meatballs.jpg" alt="Meatballs"/></a>
+                <a href="index.php?page=meatballs"><img class="calendar" src="Resources/images/meatballs.jpg" alt="Meatballs"/></a>
             </div>
             <div class="calendarday">
                 21

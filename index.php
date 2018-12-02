@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title><?php include 'title.php' ?></title>
-    <meta charset="UTF-8">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="reset.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
+<?php
 
-    <?php
-    require_once 'keys.php';
-    session_start();
-    $selected = "index";
-    $_SESSION[PAGE]  = $selected;
-    include 'header.php';
-    include 'sidemenu.php';
-    include 'homecontent.php';
-    ?>
-</body>
+
+require_once './Resources/fragments/init.php';
+
+if(isset($_GET[PAGE])){
+    include VIEWS . $_GET[PAGE].'.php';
+} else {
+    include VIEWS . 'home.php';
+}

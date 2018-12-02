@@ -2,7 +2,7 @@
     <h2>
         Meatballs
     </h2>
-    <img class="recipe" src="meatballs.jpg" alt="Meatballs"/>
+    <img class="recipe" src="Resources/images/meatballs.jpg" alt="Meatballs"/>
     <h3>
         Ingredients
     </h3>

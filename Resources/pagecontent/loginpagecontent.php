@@ -10,8 +10,6 @@
         <input type="submit" value="Log in"/>
     </form>
     <?php
-    require_once 'keys.php';
-    session_start();
     if(isset($_SESSION[LOGIN_ERROR])){
         echo("<p>".$_SESSION[LOGIN_ERROR]. "</p>");
     }

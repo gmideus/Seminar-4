@@ -1,7 +1,5 @@
 <?php
-require_once 'keys.php';
-
-session_start();
+require_once './Resources/fragments/init.php';
 
 unset($_SESSION[USERNAME]);
-include $_SESSION[PAGE]. '.php';
+include VIEWS.$_SESSION[PAGE]. '.php';

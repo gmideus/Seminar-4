@@ -1,26 +1,16 @@
 <?php
 
-/**
- * Saves the user's nick name for the session.
- */
+use Controller\Controller;
 
-require_once 'keys.php';
-require_once  'User.php';
+require_once './Resources/fragments/init.php';
 
-session_start();
-
-$attempt = new User($_POST[USERNAME], $_POST[PASSWORD]);
-
-$filename = __DIR__ . '/users';
-$users = explode(";\n", file_get_contents($filename));
-for($i = 0; $i < count($users); $i++){
-        $user = unserialize($users[$i]);
-        if($user instanceof User && $attempt->compare($user)){
-            $_SESSION[USERNAME] = $_POST[USERNAME];
-            include $_SESSION[PAGE].'.php';
-            return;
-        }
+$contr = Controller::getController();
+$username = htmlentities($_POST[USERNAME]);
+$password = htmlentities($_POST[PASSWORD]);
+if($contr->authenticateUser($username, $password)){
+    $_SESSION[USERNAME] = $username;
+    include VIEWS.$_SESSION[PAGE].'.php';
+} else {
+    $_SESSION[LOGIN_ERROR] = "Incorrect username or password. Please try again";
+    include VIEWS.'loginpage.php';
 }
-$_SESSION[LOGIN_ERROR] = "Incorrect username or password. Please try again";
-include 'loginpage.php';
-

@@ -2,7 +2,7 @@
     <h2>
         Pancakes
     </h2>
-    <img class="recipe" src="pancakes.jpg" alt="Pancakes"/>
+    <img class="recipe" src="Resources/images/pancakes.jpg" alt="Pancakes"/>
     <h3>
         Ingredients
     </h3>
