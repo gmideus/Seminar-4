@@ -1,7 +1,7 @@
 <?php
 namespace Model;
 
-class Comment{
+class Comment implements \JsonSerializable{
     private $author;
     private $content;
     private $posttime;
@@ -44,6 +44,16 @@ class Comment{
 
     public function delete(){
         $this->deleted = true;
+    }
+
+    public function jsonSerialize()
+    {
+        $json_obj = new \stdClass;
+        $json_obj->author = \json_encode($this->author);
+        $json_obj->content = \json_encode($this->content, JSON_UNESCAPED_UNICODE);
+        $json_obj->posttime = \json_encode($this->posttime);
+        $json_obj->ID = \json_encode($this->ID);
+        return $json_obj;
     }
 
 

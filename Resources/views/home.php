@@ -11,12 +11,11 @@
 </head>
 <body>
 
-<?php
-
-$selected = "calendar";
-$_SESSION[PAGE]  = $selected;
-include FRAGMENTS.'header.php';
-include FRAGMENTS.'sidemenu.php';
-include CONTENT.'calendarcontent.php';
-?>
+    <?php
+    $selected = "home";
+    $_SESSION[PAGE]  = $selected;
+    include FRAGMENTS.'header.php';
+    include FRAGMENTS.'sidemenu.php';
+    include CONTENT.'homecontent.php';
+    ?>
 </body>

@@ -5,7 +5,7 @@
 <div class="login">
     <?php
     if(isset($_SESSION[USERNAME])){
-        echo("<p>User: " . $_SESSION[USERNAME] . " <a href='logout.php'>Sign out</a></p>");
+        echo("<p>User: " . $_SESSION[USERNAME] . " <a class='logout' id='logout'>Sign out</a><input type='hidden' id='page' value=".$_SESSION[PAGE]."></p>");
     } else {
         echo("<a href ='index.php?page=loginpage'>Sign in</a>");
     }

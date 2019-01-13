@@ -5,14 +5,21 @@
     </h3>
     <?php
     if(isset($_SESSION[USERNAME])) {
+        echo("<textarea id = 'entry' rows = 5 name ='content' placeholder = 'Write your Comment here.' ></textarea>
+        <button id='submitComment'>Send</button>
+        <input class='username' type=hidden id='username' value=".$_SESSION[USERNAME].">");
+
+        /*
         echo("<form action = 'postComment.php' method = 'post' >
         <textarea id = 'content' rows = 5 name = 'content' placeholder = 'Write your Comment here.' ></textarea >
         <input type = 'submit' value = 'Send' />
         </form >");
+        */
     } else {
         echo("<p>Please <a href='index.php?page=loginpage'>sign in</a> to leave a comment</p>");
     }
-
+    echo("<div class='commentsection' id='comments''>");
+    /*
     foreach($contr->getComments($_SESSION[PAGE]) as $comment){
         echo("<div class='comment'><p>" . $comment->getAuthor() . " " . $comment->getPosttime() ."</p>");
         if($_SESSION[USERNAME] == $comment->getAuthor()){
@@ -20,6 +27,7 @@
         }
         echo("<p>" . $comment->getContent() . "</p></div>");
     }
+    */
     ?>
 
 </div>

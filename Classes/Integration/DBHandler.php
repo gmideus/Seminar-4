@@ -12,7 +12,7 @@ class DBHandler{
     }
 
     private function SQLConnect(){
-        return new \mysqli("127.0.0.1", "tasty", "abc123", "tasty", 3306);
+        return new \mysqli("localhost", "tasty", "abc123", "tasty", 3306);
 
     }
 
@@ -50,14 +50,24 @@ class DBHandler{
         return $comments;
     }
 
-    public function authenticateUser($username, $password){
+    public function getPassword($username){
         $mysqli = $this->SQLConnect();
         $stmt = $mysqli->prepare("SELECT password FROM users WHERE username = ?");
         $stmt->bind_param('s', $username);
         $stmt->execute();
         $stmt->bind_result($DBPassword);
         $stmt->fetch();
-        return password_verify($password, $DBPassword);
+        return $DBPassword;
+
+    }
+
+    public function createUser($username, $password){
+        $mysqli = $this->SQLConnect();
+        $hashed = password_hash($password, PASSWORD_DEFAULT);
+
+
+        $query = "INSERT INTO users (username, password) VALUES ('".$username."', '".$hashed."')";
+        $mysqli->query($query);
 
     }
 

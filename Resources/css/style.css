@@ -139,6 +139,12 @@ img.calendar {
     padding: 1.5em;
     text-align: center;
 }
+.logout {
+    cursor:pointer;
+    color:blue;
+    text-decoration:underline;
+
+}
 
 .sidebar {
     float:left; display:inline; width: 10%;
@@ -160,8 +166,7 @@ img.calendar {
 }
 
 .commentsection {
-    float:left;
-    display:inline;
+
     width: 60%;
 }
 
